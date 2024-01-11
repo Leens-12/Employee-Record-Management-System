@@ -4,7 +4,7 @@ int main (int argc, char * argv[]){
 
     int choice; // saves the value for the menu
 
-    struct employee * headA3;
+    struct employee * head;
     struct employee * temp;
 
     int whichOne; // saves index value a user is searching for
@@ -17,7 +17,7 @@ int main (int argc, char * argv[]){
 
     char file [MAX_LENGTH] = "proFile.txt";  // saves the file name
 
-    loadEmpData (&headA3, file);
+    loadEmpData (&head, file);
 
     
     do {
@@ -41,11 +41,11 @@ int main (int argc, char * argv[]){
         switch(choice)
         {
             case 1: 
-                recruitEmployee(&headA3);
+                recruitEmployee(&head);
                 break;
                 
             case 2: 
-                temp = headA3;
+                temp = head;
 
                 if (temp == NULL) // Checks if the linked lists is empty 
                 {
@@ -57,7 +57,7 @@ int main (int argc, char * argv[]){
                 break;
 
             case 3: 
-                temp = headA3;
+                temp = head;
 
                 if (temp == NULL) // Checks if the linked lists is empty 
                 {
@@ -70,7 +70,7 @@ int main (int argc, char * argv[]){
                 break;
 
             case 4: 
-                temp = headA3;
+                temp = head;
                 printf("Enter an employee ID: "); // takes in the id through user input 
                 scanf ("%d", &whichEmpId);
                 lookOnIdPosition = lookOnId(temp, whichEmpId); // gets its postion 
@@ -105,7 +105,7 @@ int main (int argc, char * argv[]){
                 break;
 
             case 5: 
-                temp = headA3;
+                temp = head;
                 printf("Enter the full name of the employee: "); // takes in the full name through user input 
                 getchar();
                 fgets(whichName, 100, stdin); // and saves it in whichName
@@ -144,13 +144,13 @@ int main (int argc, char * argv[]){
                 break;
 
             case 6:
-                temp = headA3;
+                temp = head;
                 result = countEmployees(temp); // saves the count
                 printf("Total number of employees = %d\n", result); 
                 break;
 
             case 7: 
-                temp = headA3;
+                temp = head;
 
                 if (temp == NULL) // Checks if the linked lists is empty 
                 {
@@ -161,7 +161,7 @@ int main (int argc, char * argv[]){
                 break; 
 
             case 8: 
-                temp = headA3;
+                temp = head;
 
                 if (temp == NULL) // Checks if the linked lists is empty 
                 {
@@ -182,7 +182,7 @@ int main (int argc, char * argv[]){
                 break;
              
             case 9: 
-                temp = headA3;
+                temp = head;
 
                 if (temp == NULL) // Checks if the linked lists is empty 
                 {
